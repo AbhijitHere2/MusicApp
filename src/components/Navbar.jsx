@@ -10,8 +10,8 @@ const Navbar = () => {
       <h1 className="text-xl w-1/2  flex ml-14 font-bold"><img className='w-15 rounded-lg' src={logo}alt="" /></h1>
       
       <div className="space-x-4 flex justify-center  w-1/2  ">
-        <Link to="/" className="hover:underline">Home</Link>
-        <Link to="/library" className="hover:underline">Library</Link>
+        <Link to="/" className="bg-purple-400 border-black border-2 py-1 px-2 rounded-2xl text-white text-sm ">Home</Link>
+        <Link to="/library" className="bg-purple-400 border-black border-2 py-1 px-2 rounded-2xl text-white text-sm">Library</Link>
       </div>
     </nav>
     </div>

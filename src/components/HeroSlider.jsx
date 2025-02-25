@@ -18,7 +18,7 @@ const HeroSlider = () => {
   // }, []);
 
   return (
-    <div className="relative  rounded-3xl mx-5 h-[32rem] max-sm:max-h-52 overflow-hidden mt-0.5 ">
+    <div className="relative  rounded-3xl mx-5 h-[32rem] max-md:max-h-[8rem] max-lg:h-[18rem] overflow-hidden mt-0.5 ">
       {images.map((img, index) => (
         <img
           key={index}

@@ -17,7 +17,7 @@ const SongItem = ({
   const audioRef = useRef(null);
   const [playing, setPlaying] = useState(false);
   const [showPayment, setShowPayment] = useState(false);
-  const previewDuration = 20000; // 30 seconds
+  const previewDuration = 60000; // 60 seconds
   let previewTimeout;
 
   useEffect(() => {
@@ -102,7 +102,7 @@ const SongItem = ({
           </button>
         </div>
 
-        <h3 className=" ml-1 text-sm text-wrap max-md:w-21 font-medium bg-transparent w-full">
+        <h3 className=" ml-1 text-sm text-wrap max-md:w-21 font-medium bg-transparent  w-full max-sm:hidden">
           {song.title}
         </h3>
         <audio
@@ -112,6 +112,9 @@ const SongItem = ({
         />
       </div>
       <div className="space-x-2  space-y-2 max-lg:w-1/3 w-1/2 max-sm:w-1/3">
+      <h3 className=" ml-1 text-sm text-wrap max-md:w-21 font-medium bg-transparent w-full md:hidden">
+          {song.title}
+        </h3>
         <button
           onClick={handleDownload}
           className="bg-green-500 hover:bg-green-700 text-white px-1.5 py-1 rounded flex items-center gap-2   "

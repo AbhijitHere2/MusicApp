@@ -5,7 +5,7 @@ import SongItem from './SongItem';
 const mockSongs = [
   {
     id: 1,
-    title: 'i Am The Best',
+    title: 'I Am The Best',
     file: '/songs/iAmTheBest.mp3',
     preview: '/songs/iAmTheBest.mp3',
     amount: 50000, // Amount in paise (e.g., INR 500.00)

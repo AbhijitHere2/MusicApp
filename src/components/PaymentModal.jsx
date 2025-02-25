@@ -4,6 +4,7 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import { SiGooglepay, SiPhonepe } from "react-icons/si";
 import { FaPaypal } from "react-icons/fa";
+import donate from '../naeImg/donate.jpg'
 
 const PaymentModal = ({ isOpen, onSuccess, onClose, songId, amount }) => {
   const [loading, setLoading] = useState(false);
@@ -56,17 +57,20 @@ const PaymentModal = ({ isOpen, onSuccess, onClose, songId, amount }) => {
 
   return (
     <Popup className=" rounded-2xl" open={isOpen} closeOnDocumentClick onClose={onClose} modal nested>
-      <div className="bg-red  rounded-lg shadow-lg  text-center p-2">
+      <div className="bg-red  rounded-lg shadow-lg  text-center p-2 ">
         <h2 className="text-xl font-bold mb-4">Complete Purchase</h2>
-        <p className="mb-4">Select a payment method to unlock this song:</p>
-        <div className="flex justify-center space-x-6 mb-4 items-center max-sm:space-x-2">
+        {/* <p className="mb-4">Select a payment method to unlock this song:</p> */}
+        <div className="flex justify-center mb-5">
+        <img className="w-24 " src={donate} alt="" />
+        </div>
+        <div className="flex justify-center space-x-6 mb-4 items-center max-sm:space-x-2 ">
           <button
             onClick={() => launchRazorpay("GooglePay")}
             className="flex flex-col outline-none items-center space-y-1 hover:text-blue-600"
             disabled={loading}
           >
             <SiGooglepay size={40} />
-            <span className="text-sm">Google Pay</span>
+            {/* <span className="text-sm">Google Pay</span> */}
           </button>
           <button
             onClick={() => launchRazorpay("PhonePe")}
@@ -74,7 +78,7 @@ const PaymentModal = ({ isOpen, onSuccess, onClose, songId, amount }) => {
             disabled={loading}
           >
             <SiPhonepe size={40} />
-            <span className="text-sm">PhonePe</span>
+            {/* <span className="text-sm">PhonePe</span> */}
           </button>
           <button
             onClick={() => launchRazorpay("PayPal")}
@@ -82,7 +86,7 @@ const PaymentModal = ({ isOpen, onSuccess, onClose, songId, amount }) => {
             disabled={loading}
           >
             <FaPaypal size={40} />
-            <span className="text-sm">PayPal</span>
+            {/* <span className="text-sm">PayPal</span> */}
           </button>
         </div>
         {error && <p className="text-red-500 mb-4">{error}</p>}
