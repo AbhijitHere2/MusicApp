@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 const images = [
-  '/images/slide4.gif',
+  '/images/slide6.jpg',
   '/images/slide5.gif',
   '/images/slide1.jpg',
 ];
