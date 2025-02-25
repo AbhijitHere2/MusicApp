@@ -1,0 +1,7 @@
+.back{
+  background-image: url('../naeImg/music.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 8px;
+}
